@@ -1,0 +1,15 @@
+imports:
+  - git:
+      url: https://github.com/ariel-os/ariel-os
+      tag: v0.2.1
+    dldir: ariel-os
+
+apps:
+  - env:
+      global:
+        CARGO_ARGS:
+          - "ESPFLASH_PORT=/dev/cu.usbmodem2101"
+  - name: mermaidariel
+    context:
+      - espressif-esp32-c3-lcdkit
+      

@@ -1,0 +1,13 @@
+[package]
+name = "mermaidariel"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+ariel-os = { path = "build/imports/ariel-os/src/ariel-os", features = ["time", "external-interrupts"] }
+ariel-os-boards = { path = "build/imports/ariel-os/src/ariel-os-boards" }
+embassy-futures = "0.1.1"
+[lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = [
+  'cfg(context, values(any()))',
+] }
