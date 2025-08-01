@@ -12,4 +12,5 @@ apps:
   - name: mermaidariel
     context:
       - espressif-esp32-c3-lcdkit
+      - nrf52840dk
       
